@@ -1,15 +1,10 @@
 /* --- CONFIGURATION EUROSILLAGE MODE SOMBRE PERMANENT --- */
 :root {
     --bg-color: #0f172a;
-    /* Fond bleu nuit profond */
     --text-color: #f1f5f9;
-    /* Texte gris très clair */
     --card-bg: #1e293b;
-    /* Gris anthracite pour les cartes et stats */
     --input-bg: #334155;
-    /* Fond des champs du formulaire */
     --primary-orange: #d34f2a;
-    /* Orange EuroSillage */
 }
 
 body {
@@ -20,35 +15,56 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden; /* Empêche le défilement horizontal sur mobile */
 }
 
-/* Force l'apparence des sections blanches en sombre (Stats, Formulaires, Cartes) */
-.bg-white,
-section.bg-white,
-.truck-card,
-form {
+/* --- NAVIGATION RESPONSIVE --- */
+nav .container {
+    display: flex;
+    flex-wrap: wrap; /* Permet au menu de passer à la ligne sur mobile */
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Ajustement de la liste du menu pour mobile */
+nav ul {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap; /* Aligne les liens proprement sur plusieurs lignes si besoin */
+    justify-content: center;
+    width: 100%; /* Prend toute la largeur sur mobile */
+    margin-top: 10px;
+}
+
+/* Sur grand écran, on remet le menu à droite du logo */
+@media (min-width: 768px) {
+    nav ul {
+        width: auto;
+        margin-top: 0;
+    }
+}
+
+/* --- SECTIONS ET GRILLES --- */
+.bg-white, section.bg-white, .truck-card, form {
     background-color: var(--card-bg) !important;
     color: var(--text-color) !important;
     border-color: #334155 !important;
 }
 
-/* Correction visuelle pour les labels du formulaire (DLC, etc) */
-[class*="bg-gray-50"],
-input,
-textarea,
-.bg-gray-50 {
-    background-color: var(--input-bg) !important;
-    color: var(--text-color) !important;
-    border: 1px solid #475569 !important;
+/* Optimisation des grilles pour mobile */
+.grid {
+    display: grid;
+    gap: 1.5rem;
 }
 
-/* Style du menu de navigation */
-nav {
-    background-color: #0f172a;
-    border-bottom: 3px solid var(--primary-orange);
+/* Par défaut (Mobile) : 1 colonne, sauf pour les stats (2 colonnes) */
+.grid-cols-mobile-stats {
+    grid-template-columns: repeat(2, 1fr);
 }
 
-/* Boutons de navigation */
+/* --- BOUTONS ET TEXTES --- */
+h1 { font-size: clamp(2rem, 8vw, 4rem); } /* Taille de texte fluide */
+
 .btn-euro {
     background-color: transparent !important;
     color: #ffffff !important;
@@ -57,24 +73,50 @@ nav {
     transition: color 0.3s ease;
     text-decoration: none;
     cursor: pointer;
+    font-size: 0.8rem;
 }
 
-.btn-euro:hover {
-    color: var(--primary-orange) !important;
-}
+.btn-euro:hover { color: var(--primary-orange) !important; }
 
-.truck-card {
-    transition: 0.3s;
-    border-bottom: 4px solid var(--primary-orange);
-}
-
-.truck-card:hover {
-    transform: translateY(-10px);
-}
-
-/* Style du Footer */
 footer {
     background-color: #020617;
     border-top: 1px solid #1e293b;
     margin-top: auto;
+}
+
+/* --- MENU BURGER --- */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Affiche le burger sur mobile */
+    }
+
+    nav ul {
+        display: none; /* Cache le menu normal */
+        flex-direction: column;
+        width: 100%;
+        background-color: #0f172a;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 20px;
+        border-bottom: 2px solid var(--primary-orange);
+    }
+
+    nav ul.active {
+        display: flex; /* Affiche le menu quand on clique */
+    }
 }
