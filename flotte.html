@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Notre Flotte | EuroSillage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="bg-slate-900 p-4 sticky top-0 z-50 shadow-xl">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-white text-2xl font-black italic uppercase">EURO<span class="text-orange-500">SILLAGE</span></a>
+            <ul class="flex items-center space-x-6 text-white text-xs font-bold uppercase tracking-widest">
+                <li><a href="index.html" class="text-orange-500">Accueil</a></li>
+                <li><a href="entreprise.html" class="hover:text-orange-500">Entreprise</a></li>
+                <li><a href="pourquoinouschoisir.html" class="hover:text-orange-500">Pourquoi nous choisir ?</a></li>
+                <li><a href="flotte.html" class="hover:text-orange-500">Flotte</a></li>
+                <li><a href="contact.html" class="btn-euro">Postuler</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container mx-auto py-16 px-6">
+        <h2 class="text-4xl font-black mb-12 uppercase italic">Notre Matériel Professionnel</h2>
+        <div class="grid md:grid-cols-3 gap-10">
+            <div class="truck-card p-6 bg-white rounded-lg shadow-lg">
+                <div class="h-48 bg-slate-800 rounded mb-4 flex items-center justify-center text-white font-bold text-2xl">SCANIA S</div>
+                <h3 class="text-xl font-bold uppercase">Scania S Highline - 730 CV</h3>
+                <p class="opacity-70 mt-2">Le fleuron pour les longues distances.</p>
+            </div>
+            <div class="truck-card p-6 bg-white rounded-lg shadow-lg">
+                <div class="h-48 bg-slate-800 rounded mb-4 flex items-center justify-center text-white font-bold text-2xl">VOLVO FH16</div>
+                <h3 class="text-xl font-bold uppercase">Volvo FH16 - 750 CV</h3>
+                <p class="opacity-70 mt-2">Puissance brute pour convois exceptionnels.</p>
+            </div>
+            <div class="truck-card p-6 bg-white rounded-lg shadow-lg">
+                <div class="h-48 bg-slate-800 rounded mb-4 flex items-center justify-center text-white font-bold text-2xl">MAN TGX</div>
+                <h3 class="text-xl font-bold uppercase">MAN TGX - 640 CV</h3>
+                <p class="opacity-70 mt-2">Idéal pour la distribution régionale.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,66 @@
+/* --- CONFIGURATION EUROSILLAGE MODE SOMBRE PERMANENT --- */
+:root {
+    --bg-color: #0f172a;       /* Fond bleu nuit profond */
+    --text-color: #f1f5f9;     /* Texte gris très clair */
+    --card-bg: #1e293b;        /* Gris anthracite pour les cartes et stats */
+    --input-bg: #334155;       /* Fond des champs du formulaire */
+    --primary-orange: #d34f2a; /* Orange EuroSillage */
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Force l'apparence des sections blanches en sombre (Stats, Formulaires, Cartes) */
+.bg-white, section.bg-white, .truck-card, form {
+    background-color: var(--card-bg) !important;
+    color: var(--text-color) !important;
+    border-color: #334155 !important;
+}
+
+/* Correction visuelle pour les labels du formulaire (DLC, etc) */
+[class*="bg-gray-50"], input, textarea, .bg-gray-50 {
+    background-color: var(--input-bg) !important;
+    color: var(--text-color) !important;
+    border: 1px solid #475569 !important;
+}
+
+/* Style du menu de navigation */
+nav {
+    background-color: #0f172a;
+    border-bottom: 3px solid var(--primary-orange);
+}
+
+/* Boutons de navigation */
+.btn-euro {
+    background-color: transparent !important;
+    color: #ffffff !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-euro:hover {
+    color: var(--primary-orange) !important;
+}
+
+.truck-card {
+    transition: 0.3s;
+    border-bottom: 4px solid var(--primary-orange);
+}
+.truck-card:hover { transform: translateY(-10px); }
+
+/* Style du Footer */
+footer {
+    background-color: #020617;
+    border-top: 1px solid #1e293b;
+    margin-top: auto;
+}
