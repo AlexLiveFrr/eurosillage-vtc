@@ -1,4 +1,4 @@
-document.getElementById('discordForm').addEventListener('submit', function(e) {
+document.getElementById('discordForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
     const webhookURL = "TON_LIEN_WEBHOOK_ICI";
@@ -8,7 +8,7 @@ document.getElementById('discordForm').addEventListener('submit', function(e) {
     const age = document.getElementById('age').value;
     const hours = document.getElementById('hours').value;
     const motivation = document.getElementById('motivation').value;
-    
+
     let dlcList = [];
     document.querySelectorAll('.dlc:checked').forEach((checkbox) => {
         dlcList.push(checkbox.value);
@@ -54,9 +54,9 @@ document.getElementById('discordForm').addEventListener('submit', function(e) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
     })
-    .then(res => {
-        alert("Votre candidature pour EuroSillage Logistique a été envoyée !");
-        document.getElementById('discordForm').reset();
-    })
-    .catch(err => alert("Erreur lors de l'envoi. Vérifiez votre connexion."));
+        .then(res => {
+            alert("Votre candidature pour EuroSillage Logistique a été envoyée !");
+            document.getElementById('discordForm').reset();
+        })
+        .catch(err => alert("Erreur lors de l'envoi. Vérifiez votre connexion."));
 });
