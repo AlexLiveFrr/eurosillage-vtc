@@ -1,13 +1,10 @@
 document.getElementById('discordForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
-    // REMPLACE ICI PAR TON NOUVEAU LIEN COPIÉ SUR DISCORD
-    const webhookURL = "https://discord.com/api/webhooks/1459356270879572070/7KQkQ0-RbUN7sNfPRZlNRpn2pFVo17OP_MfULTfI6p-0PqLv2fxgyVB1K69ewBVOg38G";
+    // Ton lien est maintenant configuré ici
+    const webhookURL = "https://discord.com/api/webhooks/1458665362718724239/88XL2D3hB1wqIBZO8rMDlJYukrfSOcfbOQhTax4ciurw7kE-imKepifAtbVNN0HfpDvV";
 
-    if(webhookURL === "https://discord.com/api/webhooks/1459356270879572070/7KQkQ0-RbUN7sNfPRZlNRpn2pFVo17OP_MfULTfI6p-0PqLv2fxgyVB1K69ewBVOg38G") {
-        alert("Attention : Le lien Webhook n'est pas configuré.");
-        return;
-    }
+    // J'ai supprimé le bloc "if" qui bloquait l'envoi pour que ça marche directement
 
     const pseudo = document.getElementById('username').value;
     const age = document.getElementById('age').value;
