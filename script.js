@@ -1,40 +1,58 @@
-document.getElementById('discordForm').addEventListener('submit', function (e) {
+document.getElementById('discordForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
-    const webhookURL = "TON_LIEN_WEBHOOK_ICI";
+    // REMPLACE par ton lien de Webhook Discord
+    const webhookURL = "https://discord.com/api/webhooks/1458667146946285652/IrZUJCZ95hCjLCR6j3yc3rMOlF3d8BvW_qBX5WGGQzT7RKPDJle9oB_Dxcnsr7xSEFTl";
 
-    // Récupération des données
+    // Récupération des données de base
     const pseudo = document.getElementById('username').value;
     const age = document.getElementById('age').value;
     const hours = document.getElementById('hours').value;
     const motivation = document.getElementById('motivation').value;
-
+    
+    // Récupération des nouveaux champs ajoutés
+    const hardware = document.getElementById('hardware').value;
+    const style = document.getElementById('drive_style').value;
+    const tmpId = document.getElementById('tmp_id').value || "Non renseigné";
+    const dispo = document.getElementById('availability').value || "Non précisé";
+    
+    // Récupération des DLC cochés
     let dlcList = [];
     document.querySelectorAll('.dlc:checked').forEach((checkbox) => {
         dlcList.push(checkbox.value);
     });
 
-    // Construction du message style "EuroSillage"
+    // Construction du message ultra-complet pour Discord
     const payload = {
         "username": "EuroSillage - Recrutement",
-        "avatar_url": "URL_DE_TON_LOGO_PNG", // Mets le lien direct de ton logo ici
+        "avatar_url": "https://raw.githubusercontent.com/AlexLiveFrr/eurosillage-vtc/main/img/logo.png", 
         "embeds": [{
             "title": "🚚 NOUVELLE CANDIDATURE REÇUE",
             "description": "Un chauffeur souhaite rejoindre les rangs d'**EuroSillage Logistique**.",
-            "color": 13848362, // Le code couleur orange (D34F2A en décimal)
+            "color": 13848362, // Code couleur orange EuroSillage
             "thumbnail": {
-                "url": "URL_DE_TON_LOGO_PNG"
+                "url": "https://raw.githubusercontent.com/AlexLiveFrr/eurosillage-vtc/main/img/logo.png"
             },
             "fields": [
                 {
                     "name": "👤 INFORMATIONS CHAUFFEUR",
                     "value": `**Nom:** ${pseudo}\n**Âge:** ${age} ans\n**Expérience:** ${hours} heures`,
+                    "inline": true
+                },
+                {
+                    "name": "⚙️ CONFIGURATION & STYLE",
+                    "value": `**Matériel:** ${hardware}\n**Style:** ${style}\n**TMP ID:** ${tmpId}`,
+                    "inline": true
+                },
+                {
+                    "name": "📅 DISPONIBILITÉS",
+                    "value": dispo,
                     "inline": false
                 },
                 {
                     "name": "🗺️ EXTENSIONS DE CARTE",
                     "value": dlcList.length > 0 ? "✅ " + dlcList.join("\n✅ ") : "❌ Aucun DLC",
-                    "inline": true
+                    "inline": false
                 },
                 {
                     "name": "📝 MOTIVATIONS",
@@ -43,20 +61,28 @@ document.getElementById('discordForm').addEventListener('submit', function (e) {
                 }
             ],
             "footer": {
-                "text": "EuroSillage Logistique - Le bitume n'attend que vous",
+                "text": "EuroSillage Logistique - Recrutement Automatisé",
             },
             "timestamp": new Date().toISOString()
         }]
     };
 
+    // Envoi de la requête vers Discord
     fetch(webhookURL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
     })
-        .then(res => {
-            alert("Votre candidature pour EuroSillage Logistique a été envoyée !");
-            document.getElementById('discordForm').reset();
-        })
-        .catch(err => alert("Erreur lors de l'envoi. Vérifiez votre connexion."));
+    .then(res => {
+        if (res.ok) {
+            alert("✅ Votre candidature pour EuroSillage Logistique a été envoyée avec succès !");
+            document.getElementById('discordForm').reset(); // Vide le formulaire après envoi
+        } else {
+            alert("❌ Erreur lors de l'envoi. Vérifiez votre Webhook.");
+        }
+    })
+    .catch(err => {
+        console.error(err);
+        alert("❌ Une erreur est survenue lors de la connexion.");
+    });
 });

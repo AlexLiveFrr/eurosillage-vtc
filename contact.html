@@ -38,6 +38,38 @@
                         class="w-full p-3 border rounded-lg mt-1" required></div>
             </div>
 
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <label class="font-bold">ID TruckersMP (Optionnel)</label>
+                    <input type="number" id="tmp_id" placeholder="Ex: 1234567"
+                        class="w-full p-3 border rounded-lg mt-1 outline-none">
+                </div>
+                <div>
+                    <label class="font-bold">Votre Matériel</label>
+                    <select id="hardware" class="w-full p-3 border rounded-lg mt-1 outline-none">
+                        <option value="Clavier/Souris">Clavier / Souris</option>
+                        <option value="Manette">Manette</option>
+                        <option value="Volant">Volant (G29, T300, etc.)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mt-6">
+                <div>
+                    <label class="font-bold">Style de conduite préféré</label>
+                    <select id="drive_style" class="w-full p-3 border rounded-lg mt-1 outline-none">
+                        <option value="Réaliste (Respect strict)">Réaliste (Respect strict)</option>
+                        <option value="Semi-Réaliste">Semi-Réaliste</option>
+                        <option value="Détendu">Détendu</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="font-bold">Disponibilités habituelles</label>
+                    <input type="text" id="availability" placeholder="Ex: Soirs et week-ends"
+                        class="w-full p-3 border rounded-lg mt-1 outline-none">
+                </div>
+            </div>
+
             <div><label class="font-bold">Heures sur ETS2</label><input type="number" id="hours"
                     class="w-full p-3 border rounded-lg mt-1" required></div>
 
