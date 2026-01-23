@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,112 +9,167 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="img/logo.png">
 </head>
+
 <body>
     <nav class="bg-slate-900 p-4 sticky top-0 z-50 shadow-xl border-b border-orange-600">
-    <div class="container mx-auto flex justify-between items-center">
-        <a href="index.html" class="flex items-center space-x-3">
-            <img src="img/logo.png" alt="Logo EuroSillage" class="h-10 md:h-12 w-auto">
-            <span class="text-white text-xl font-black italic uppercase">EURO<span class="text-orange-500">SILLAGE</span></span>
-        </a>
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="img/logo.png" alt="Logo EuroSillage" class="h-10 md:h-12 w-auto">
+                <span class="text-white text-xl font-black italic uppercase">EURO<span
+                        class="text-orange-500">SILLAGE</span></span>
+            </a>
 
-        <div class="menu-toggle" id="mobile-menu">
-            <span></span>
-            <span></span>
-            <span></span>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="flex items-center gap-6 text-white text-xs font-bold uppercase tracking-widest" id="nav-links">
+                <li><a href="index.html" class="hover:text-orange-500 transition">Accueil</a></li>
+                <li><a href="entreprise.html" class="hover:text-orange-500 transition">Entreprise</a></li>
+                <li><a href="pourquoinouschoisir.html" class="hover:text-orange-500 transition text-center">Pourquoi
+                        nous choisir ?</a></li>
+                <li><a href="flotte.html" class="hover:text-orange-500 transition">Flotte</a></li>
+                <li><a href="contact.html"
+                        class="bg-orange-600 px-4 py-2 rounded hover:bg-orange-700 transition">Postuler</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+
+    <section class="py-12 container mx-auto px-4 max-w-5xl">
+    <div class="text-center mb-10">
+        <h2 class="text-4xl font-black uppercase italic text-white">Dossier de <span class="text-orange-500">Recrutement</span></h2>
+        <p class="text-gray-400 mt-2 text-sm uppercase tracking-widest">Rejoignez l'élite du transport virtuel</p>
+    </div>
+
+    <form id="discordForm" class="bg-slate-800/40 p-6 md:p-10 rounded-3xl border border-slate-700 shadow-2xl space-y-8 backdrop-blur-sm">
+        
+        <div class="space-y-4">
+            <h3 class="text-orange-500 font-bold uppercase text-xs tracking-tighter border-b border-orange-500/30 pb-2">01. Informations Personnelles</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="space-y-1">
+                    <label class="text-gray-300 text-sm font-semibold ml-1">Pseudo Discord</label>
+                    <input type="text" id="username" placeholder="Ex: Alex#1234" class="w-full p-3 rounded-xl outline-none transition" required>
+                </div>
+                <div class="space-y-1">
+                    <label class="text-gray-300 text-sm font-semibold ml-1">Âge</label>
+                    <input type="number" id="age" placeholder="Votre âge" class="w-full p-3 rounded-xl outline-none transition" required>
+                </div>
+            </div>
         </div>
 
-        <ul class="flex items-center gap-6 text-white text-xs font-bold uppercase tracking-widest" id="nav-links">
-            <li><a href="index.html" class="hover:text-orange-500 transition">Accueil</a></li>
-            <li><a href="entreprise.html" class="hover:text-orange-500 transition">Entreprise</a></li>
-            <li><a href="pourquoinouschoisir.html" class="hover:text-orange-500 transition text-center">Pourquoi nous choisir ?</a></li>
-            <li><a href="flotte.html" class="hover:text-orange-500 transition">Flotte</a></li>
-            <li><a href="contact.html" class="bg-orange-600 px-4 py-2 rounded hover:bg-orange-700 transition">Postuler</a></li>
-        </ul>
-    </div>
-</nav>
-
-<script>
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navLinks = document.getElementById('nav-links');
-
-    mobileMenu.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-</script>
-
-    <section class="py-16 container mx-auto px-6 max-w-4xl">
-        <form id="discordForm" class="bg-white p-10 rounded-2xl shadow-2xl space-y-6">
-            <h2 class="text-3xl font-black uppercase text-center mb-8">Dossier de Recrutement</h2>
-            
-            <div class="grid md:grid-cols-2 gap-6">
-                <div><label class="font-bold">Pseudo Discord</label><input type="text" id="username" class="w-full p-3 border rounded-lg mt-1 outline-none" required></div>
-                <div><label class="font-bold">Âge</label><input type="number" id="age" class="w-full p-3 border rounded-lg mt-1 outline-none" required></div>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-4 bg-slate-800/20 p-4 rounded-lg">
-                <div>
-                    <label class="font-bold text-sm">ID Steam</label>
-                    <input type="text" id="steam_id" placeholder="7656119..." class="w-full p-2 border rounded mt-1 text-sm outline-none">
+        <div class="space-y-4">
+            <h3 class="text-orange-500 font-bold uppercase text-xs tracking-tighter border-b border-orange-500/30 pb-2">02. Profil de Conducteur</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="space-y-1">
+                    <div class="flex justify-between items-center px-1">
+                        <label class="text-gray-300 text-sm font-semibold">ID Steam</label>
+                        <a href="https://steamid.pro/fr/" target="_blank" class="text-[9px] text-orange-400 hover:text-white transition uppercase">Aide ?</a>
+                    </div>
+                    <input type="text" id="steam_id" placeholder="7656119..." class="w-full p-3 rounded-xl outline-none text-sm transition">
                 </div>
-                <div>
-                    <label class="font-bold text-sm">ID TruckBook</label>
-                    <input type="text" id="truckbook_id" placeholder="Votre ID" class="w-full p-2 border rounded mt-1 text-sm outline-none">
+                <div class="space-y-1">
+                    <div class="flex justify-between items-center px-1">
+                        <label class="text-gray-300 text-sm font-semibold">ID Trucky</label>
+                        <a href="https://hub.truckyapp.com/profile" target="_blank" class="text-[9px] text-orange-400 hover:text-white transition uppercase">Où le trouver ?</a>
+                    </div>
+                    <input type="text" id="trucky_id" placeholder="Votre ID" class="w-full p-3 rounded-xl outline-none text-sm transition">
                 </div>
-                <div>
-                    <label class="font-bold text-sm">ID Trucky</label>
-                    <input type="text" id="trucky_id" placeholder="Votre ID" class="w-full p-2 border rounded mt-1 text-sm outline-none">
+                <div class="space-y-1">
+                    <label class="text-gray-300 text-sm font-semibold ml-1">Heures ETS2</label>
+                    <input type="number" id="hours" placeholder="Ex: 500" class="w-full p-3 rounded-xl outline-none transition" required>
                 </div>
             </div>
+        </div>
 
-            <div class="grid md:grid-cols-2 gap-6">
-                <div>
-                    <label class="font-bold">Votre Matériel</label>
-                    <select id="hardware" class="w-full p-3 border rounded-lg mt-1 outline-none bg-[#334155] text-white">
-                        <option value="Clavier/Souris">Clavier / Souris</option>
-                        <option value="Manette">Manette</option>
-                        <option value="Volant">Volant (G29, T300, etc.)</option>
-                    </select>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="space-y-4">
+                <h3 class="text-orange-500 font-bold uppercase text-xs tracking-tighter border-b border-orange-500/30 pb-2">03. Votre Matériel</h3>
+                <select id="hardware" class="w-full p-3 rounded-xl outline-none bg-white text-black font-medium transition cursor-pointer">
+                    <option value="Clavier/Souris">Clavier / Souris</option>
+                    <option value="Manette">Manette</option>
+                    <option value="Volant">Volant (G29, T300, etc.)</option>
+                </select>
+            </div>
+            <div class="space-y-4">
+                <h3 class="text-orange-500 font-bold uppercase text-xs tracking-tighter border-b border-orange-500/30 pb-2">04. Style de conduite</h3>
+                <select id="drive_style" class="w-full p-3 rounded-xl outline-none bg-white text-black font-medium transition cursor-pointer">
+                    <option value="Réaliste">Réaliste (Respect strict)</option>
+                    <option value="Semi-Réaliste">Semi-Réaliste</option>
+                    <option value="Détendu">Détendu</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="space-y-4">
+            <h3 class="text-orange-500 font-bold uppercase text-xs tracking-tighter border-b border-orange-500/30 pb-2">05. Cartes (DLC)</h3>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 bg-slate-900/30 rounded-2xl border border-slate-700">
+                <label class="flex items-center space-x-3 cursor-pointer group hover:bg-slate-700/30 p-2 rounded-lg transition">
+                    <input type="checkbox" class="dlc w-4 h-4 accent-orange-500" value="Going East">
+                    <span class="text-xs text-gray-400 group-hover:text-white transition">Going East</span>
+                </label>
+                <label class="flex items-center space-x-3 cursor-pointer group hover:bg-slate-700/30 p-2 rounded-lg transition">
+                    <input type="checkbox" class="dlc w-4 h-4 accent-orange-500" value="Scandinavia">
+                    <span class="text-xs text-gray-400 group-hover:text-white transition">Scandinavia</span>
+                </label>
+                <label class="flex items-center space-x-3 cursor-pointer group hover:bg-slate-700/30 p-2 rounded-lg transition">
+                    <input type="checkbox" class="dlc w-4 h-4 accent-orange-500" value="France">
+                    <span class="text-xs text-gray-400 group-hover:text-white transition">France</span>
+                </label>
+                <label class="flex items-center space-x-3 cursor-pointer group hover:bg-slate-700/30 p-2 rounded-lg transition">
+                    <input type="checkbox" class="dlc w-4 h-4 accent-orange-500" value="Italia">
+                    <span class="text-xs text-gray-400 group-hover:text-white transition">Italia</span>
+                </label>
+                <label class="flex items-center space-x-3 cursor-pointer group hover:bg-slate-700/30 p-2 rounded-lg transition">
+                    <input type="checkbox" class="dlc w-4 h-4 accent-orange-500" value="Baltic Sea">
+                    <span class="text-xs text-gray-400 group-hover:text-white transition">Baltic Sea</span>
+                </label>
+                <label class="flex items-center space-x-3 cursor-pointer group hover:bg-slate-700/30 p-2 rounded-lg transition">
+                    <input type="checkbox" class="dlc w-4 h-4 accent-orange-500" value="Black Sea">
+                    <span class="text-xs text-gray-400 group-hover:text-white transition">Black Sea</span>
+                </label>
+                <label class="flex items-center space-x-3 cursor-pointer group hover:bg-slate-700/30 p-2 rounded-lg transition">
+                    <input type="checkbox" class="dlc w-4 h-4 accent-orange-500" value="Iberia">
+                    <span class="text-xs text-gray-400 group-hover:text-white transition">Iberia</span>
+                </label>
+                <label class="flex items-center space-x-3 cursor-pointer group hover:bg-slate-700/30 p-2 rounded-lg transition">
+                    <input type="checkbox" class="dlc w-4 h-4 accent-orange-500" value="West Balkans">
+                    <span class="text-xs text-gray-400 group-hover:text-white transition">West Balkans</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="space-y-4">
+            <h3 class="text-orange-500 font-bold uppercase text-xs tracking-tighter border-b border-orange-500/30 pb-2">06. Votre Engagement</h3>
+            <div class="space-y-4">
+                <div class="space-y-1">
+                    <label class="text-gray-300 text-sm font-semibold ml-1">Disponibilités</label>
+                    <input type="text" id="availability" placeholder="Ex: Soirs et week-ends" class="w-full p-3 rounded-xl outline-none transition">
                 </div>
-                <div>
-                    <label class="font-bold">Style de conduite</label>
-                    <select id="drive_style" class="w-full p-3 border rounded-lg mt-1 outline-none bg-[#334155] text-white">
-                        <option value="Réaliste">Réaliste (Respect strict)</option>
-                        <option value="Semi-Réaliste">Semi-Réaliste</option>
-                        <option value="Détendu">Détendu</option>
-                    </select>
+                <div class="space-y-1">
+                    <label class="text-gray-300 text-sm font-semibold ml-1">Motivation</label>
+                    <textarea id="motivation" rows="4" class="w-full p-3 rounded-xl outline-none transition" placeholder="Pourquoi EuroSillage ?"></textarea>
                 </div>
             </div>
+        </div>
 
-            <div class="grid md:grid-cols-2 gap-6">
-                <div><label class="font-bold">ID TruckersMP</label><input type="number" id="tmp_id" class="w-full p-3 border rounded-lg mt-1 outline-none"></div>
-                <div><label class="font-bold">Heures ETS2</label><input type="number" id="hours" class="w-full p-3 border rounded-lg mt-1 outline-none" required></div>
-            </div>
-
-            <div>
-                <label class="font-bold">Vos Disponibilités</label>
-                <input type="text" id="availability" placeholder="Ex: Soirs et week-ends" class="w-full p-3 border rounded-lg mt-1 outline-none">
-            </div>
-
-            <div>
-                <label class="font-bold mb-4 block">DLC Possédés</label>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 bg-slate-800/10 p-4 rounded-lg">
-                    <label class="flex items-center space-x-2"><input type="checkbox" class="dlc" value="Going East"> <span>Going East</span></label>
-                    <label class="flex items-center space-x-2"><input type="checkbox" class="dlc" value="Scandinavia"> <span>Scandinavia</span></label>
-                    <label class="flex items-center space-x-2"><input type="checkbox" class="dlc" value="France"> <span>France</span></label>
-                    <label class="flex items-center space-x-2"><input type="checkbox" class="dlc" value="Italia"> <span>Italia</span></label>
-                    <label class="flex items-center space-x-2"><input type="checkbox" class="dlc" value="Baltic Sea"> <span>Baltic Sea</span></label>
-                    <label class="flex items-center space-x-2"><input type="checkbox" class="dlc" value="Black Sea"> <span>Black Sea</span></label>
-                    <label class="flex items-center space-x-2"><input type="checkbox" class="dlc" value="Iberia"> <span>Iberia</span></label>
-                    <label class="flex items-center space-x-2"><input type="checkbox" class="dlc" value="West Balkans"> <span>West Balkans</span></label>
-                </div>
-            </div>
-
-            <div><label class="font-bold">Motivation</label><textarea id="motivation" rows="5" class="w-full p-3 border rounded-lg mt-1" placeholder="Parle-nous de ta passion..."></textarea></div>
-
-            <button type="submit" class="w-full bg-orange-600 text-white font-bold py-4 rounded-lg hover:bg-orange-700 transition shadow-lg">Envoyer la candidature</button>
-        </form>
-    </section>
+        <button type="submit" class="w-full bg-orange-600 hover:bg-orange-500 text-white font-black uppercase italic py-5 rounded-2xl transition transform hover:scale-[1.02] shadow-xl tracking-widest text-lg">
+            Transmettre mon dossier
+        </button>
+    </form>
+</section>
 
     <script src="script.js"></script>
 </body>
+
 </html>
