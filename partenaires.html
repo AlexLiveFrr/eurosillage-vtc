@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partenaires | EuroSillage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body class="bg-[#0f172a] text-[#f1f5f9]">
+
+    <nav class="bg-slate-900 p-4 sticky top-0 z-50 shadow-xl border-b border-orange-600">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="img/logo.png" alt="Logo EuroSillage" class="h-10 md:h-12 w-auto">
+                <span class="text-white text-xl font-black italic uppercase">EURO<span class="text-orange-500">SILLAGE</span></span>
+            </a>
+            <div class="menu-toggle" id="mobile-menu"><span></span><span></span><span></span></div>
+            <ul class="flex items-center gap-6 text-white text-xs font-bold uppercase tracking-widest" id="nav-links">
+                <li><a href="index.html" class="hover:text-orange-500 transition">Accueil</a></li>
+                <li><a href="entreprise.html" class="hover:text-orange-500 transition">Entreprise</a></li>
+                <li><a href="reglement.html" class="hover:text-orange-500 transition">Règlement</a></li>
+                <li><a href="partenaires.html" class="text-orange-500 transition border-b-2 border-orange-500 pb-1">Partenaires</a></li>
+                <li><a href="flotte.html" class="hover:text-orange-500 transition">Flotte</a></li>
+                <li><a href="contact.html" class="bg-orange-600 px-4 py-2 rounded hover:bg-orange-700 transition">Postuler</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="py-20 bg-slate-800/30 border-b border-orange-500/20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl font-black uppercase italic mb-4 text-white">Nos <span class="text-orange-500">Alliés</span></h1>
+            <p class="text-gray-400 max-w-2xl mx-auto uppercase tracking-widest text-sm">Les entreprises qui partagent notre sillage sur la route.</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto py-16 px-6">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            <div class="bg-slate-800/50 p-8 rounded-3xl border border-slate-700 hover:border-orange-500 transition-all duration-300 group hover:-translate-y-2 shadow-2xl">
+                <div class="h-20 w-20 bg-slate-900 rounded-2xl mb-6 flex items-center justify-center border border-slate-700 group-hover:border-orange-500/50 overflow-hidden">
+                    <img src="https://truckyapp.com/wp-content/uploads/2019/02/trucky-logo-round.png" alt="Trucky" class="w-12 h-12 object-contain">
+                </div>
+                <h3 class="text-2xl font-black text-white uppercase italic mb-3">Trucky Hub</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">Notre partenaire technologique pour le suivi logistique en temps réel et la gestion de la flotte.</p>
+                <div class="flex space-x-4">
+                    <a href="https://hub.truckyapp.com/vtc/41679" target="_blank" class="text-orange-500 font-bold text-xs uppercase tracking-tighter hover:text-white transition">Voir le Hub</a>
+                </div>
+            </div>
+
+            <div class="bg-slate-800/50 p-8 rounded-3xl border border-slate-700 hover:border-orange-500 transition-all duration-300 group hover:-translate-y-2 shadow-2xl">
+                <div class="h-20 w-20 bg-slate-900 rounded-2xl mb-6 flex items-center justify-center border border-slate-700 group-hover:border-orange-500/50">
+                    <span class="text-3xl font-black text-slate-700 group-hover:text-orange-500/20">VTC</span>
+                </div>
+                <h3 class="text-2xl font-black text-white uppercase italic mb-3">VTC Alliée</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">Une entreprise partenaire avec laquelle nous organisons régulièrement des convois inter-VTC réalistes.</p>
+                <a href="#" class="inline-block bg-slate-700 group-hover:bg-orange-600 text-white text-[10px] font-bold py-2 px-4 rounded-lg uppercase transition">Discord Partenaire</a>
+            </div>
+
+            <div class="bg-orange-600/5 p-8 rounded-3xl border-2 border-dashed border-orange-500/30 flex flex-col items-center justify-center text-center">
+                <div class="text-4xl mb-4">🤝</div>
+                <h3 class="text-xl font-bold text-white uppercase mb-2">Devenir Partenaire ?</h3>
+                <p class="text-gray-400 text-xs mb-6">Vous souhaitez rouler avec EuroSillage Logistique ? Contactez-nous sur Discord.</p>
+                <a href="https://discord.gg/YnG3dg6SG4" class="border-2 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white font-black py-2 px-6 rounded-xl transition text-xs uppercase italic">Nous contacter</a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="py-12 text-center border-t border-slate-800 mt-auto">
+        <img src="img/logo.png" alt="Logo" class="h-10 mx-auto mb-4 opacity-50">
+        <p class="text-gray-600 text-[10px] uppercase tracking-[0.3em]">© 2026 EuroSillage Logistique</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

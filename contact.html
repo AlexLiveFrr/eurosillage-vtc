@@ -28,11 +28,10 @@
             <ul class="flex items-center gap-6 text-white text-xs font-bold uppercase tracking-widest" id="nav-links">
                 <li><a href="index.html" class="hover:text-orange-500 transition">Accueil</a></li>
                 <li><a href="entreprise.html" class="hover:text-orange-500 transition">Entreprise</a></li>
-                <li><a href="pourquoinouschoisir.html" class="hover:text-orange-500 transition text-center">Pourquoi
-                        nous choisir ?</a></li>
+                <li><a href="pourquoinouschoisir.html" class="hover:text-orange-500 transition text-center">Pourquoi nous choisir ?</a></li>
+                <li><a href="reglement.html" class="hover:text-orange-500 transition">Règlement</a></li>
                 <li><a href="flotte.html" class="hover:text-orange-500 transition">Flotte</a></li>
-                <li><a href="contact.html"
-                        class="bg-orange-600 px-4 py-2 rounded hover:bg-orange-700 transition">Postuler</a></li>
+                <li><a href="contact.html" class="bg-orange-600 px-4 py-2 rounded hover:bg-orange-700 transition">Postuler</a></li>
             </ul>
         </div>
     </nav>
@@ -163,9 +162,15 @@
             </div>
         </div>
 
-        <button type="submit" class="w-full bg-orange-600 hover:bg-orange-500 text-white font-black uppercase italic py-5 rounded-2xl transition transform hover:scale-[1.02] shadow-xl tracking-widest text-lg">
-            Transmettre mon dossier
-        </button>
+        <div class="space-y-4 p-4 bg-orange-500/10 rounded-2xl border border-orange-500/30">
+        <label class="flex items-center space-x-3 cursor-pointer group">
+        <input type="checkbox" id="accept_rules" class="w-5 h-5 accent-orange-600" required>
+        <span class="text-sm text-gray-200 group-hover:text-white transition"> J'ai lu et j'accepte le <a href="reglement.html" target="_blank" class="text-orange-500 underline font-bold">règlement officiel</a> d'EuroSillage.
+        </span>
+    </label>
+</div>
+
+        <button type="submit" class="w-full bg-orange-600 hover:bg-orange-500 text-white font-black uppercase italic py-5 rounded-2xl transition transform hover:scale-[1.02] shadow-xl tracking-widest text-lg"> Transmettre mon dossier</button>
     </form>
 </section>
 
