@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.getElementById('discordForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
-    const webhookURL = "https://discord.com/api/webhooks/1464303276777275485/5uQxWbfSVsNcYl-5IFCQPxmiFmwM0QbPXZ_CjbOo6W4BfkRP8dh9oMpd2aTiv_EBAva2";
+    const webhookURL = "https://discord.com/api/webhooks/1464321163986731114/-T1MQxQyVNHgQgWVppScVDjoMaJGmCk7-V2_bezuTIOV725GOj4bTpkZLDxuRPGGZu7M";
 
     // Récupération des données
     const acceptedRules = document.getElementById('accept_rules').checked;
