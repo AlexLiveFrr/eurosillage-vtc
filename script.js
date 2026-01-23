@@ -62,8 +62,26 @@ document.getElementById('discordForm').addEventListener('submit', function (e) {
     })
     .then(res => {
         if (res.ok) {
-            alert("✅ Ton dossier a été transmis avec succès à EuroSillage !");
-            document.getElementById('discordForm').reset();
+            // REMPLACEMENT DU FORMULAIRE PAR LE MESSAGE DE SUCCÈS
+            const formContainer = document.getElementById('discordForm');
+            formContainer.innerHTML = `
+                <div class="text-center py-10">
+                    <div class="text-6xl mb-6">✅</div>
+                    <h2 class="text-3xl font-black uppercase italic text-white mb-4">Dossier Transmis !</h2>
+                    <p class="text-gray-300 mb-8">Ton dossier est entre les mains de l'équipe EuroSillage.</p>
+                    
+                    <div class="bg-slate-900/50 p-6 rounded-2xl border border-orange-500/30 mb-8">
+                        <p class="text-sm text-orange-500 font-bold uppercase mb-4 tracking-widest">Étape Suivante</p>
+                        <p class="text-white mb-6">Rejoins notre serveur Discord pour passer ton entretien :</p>
+                        <a href="https://discord.gg/YnG3dg6SG4" target="_blank" class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-xl transition inline-block">
+                            Rejoindre le Discord
+                        </a>
+                    </div>
+                    
+                    <a href="index.html" class="text-gray-500 hover:text-white text-xs uppercase tracking-widest transition">Retour à l'accueil</a>
+                </div>
+            `;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         } else {
             alert("❌ Erreur lors de l'envoi. Vérifie ta connexion.");
         }
