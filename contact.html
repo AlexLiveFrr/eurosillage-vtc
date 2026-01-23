@@ -48,133 +48,189 @@
     </script>
 
     <section class="py-12 container mx-auto px-4 max-w-5xl">
-    <div class="text-center mb-10">
-        <h2 class="text-4xl font-black uppercase italic text-white">Dossier de <span class="text-orange-500">Recrutement</span></h2>
-        <p class="text-gray-400 mt-2 text-sm uppercase tracking-widest">Rejoignez l'élite du transport virtuel</p>
-    </div>
-
-    <form id="discordForm" class="bg-slate-800/40 p-6 md:p-10 rounded-3xl border border-slate-700 shadow-2xl space-y-8 backdrop-blur-sm">
-        
-        <div class="space-y-4">
-            <h3 class="text-orange-500 font-bold uppercase text-xs tracking-tighter border-b border-orange-500/30 pb-2">01. Informations Personnelles</h3>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="space-y-1">
-                    <label class="text-gray-300 text-sm font-semibold ml-1">Pseudo Discord</label>
-                    <input type="text" id="username" placeholder="Ex: Alex#1234" class="w-full p-3 rounded-xl outline-none transition" required>
-                </div>
-                <div class="space-y-1">
-                    <label class="text-gray-300 text-sm font-semibold ml-1">Âge</label>
-                    <input type="number" id="age" placeholder="Votre âge" class="w-full p-3 rounded-xl outline-none transition" required>
-                </div>
-            </div>
+        <div class="text-center mb-10">
+            <h2 class="text-4xl font-black uppercase italic text-white">Dossier de <span
+                    class="text-orange-500">Recrutement</span></h2>
+            <p class="text-gray-400 mt-2 text-sm uppercase tracking-widest">Rejoignez l'élite du transport virtuel</p>
         </div>
 
-        <div class="space-y-4">
-            <h3 class="text-orange-500 font-bold uppercase text-xs tracking-tighter border-b border-orange-500/30 pb-2">02. Profil de Conducteur</h3>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="space-y-1">
-                    <div class="flex justify-between items-center px-1">
-                        <label class="text-gray-300 text-sm font-semibold">ID Steam</label>
-                        <a href="https://steamid.pro/fr/" target="_blank" class="text-[9px] text-orange-400 hover:text-white transition uppercase">Aide ?</a>
+        <form id="discordForm"
+            class="bg-slate-800/40 p-6 md:p-10 rounded-3xl border border-slate-700 shadow-2xl space-y-8 backdrop-blur-sm">
+
+            <div class="space-y-4">
+                <h3
+                    class="text-orange-500 font-bold uppercase text-xs tracking-tighter border-b border-orange-500/30 pb-2">
+                    01. Informations Personnelles</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="space-y-1">
+                        <label class="text-gray-300 text-sm font-semibold ml-1">Pseudo Discord</label>
+                        <input type="text" id="username" placeholder="Ex: Alex#1234"
+                            class="w-full p-3 rounded-xl outline-none transition" required>
                     </div>
-                    <input type="text" id="steam_id" placeholder="7656119..." class="w-full p-3 rounded-xl outline-none text-sm transition">
-                </div>
-                <div class="space-y-1">
-                    <div class="flex justify-between items-center px-1">
-                        <label class="text-gray-300 text-sm font-semibold">Pseudo Trucky</label>
-                        <a href="https://hub.truckyapp.com/profile" target="_blank" class="text-[9px] text-orange-400 hover:text-white transition uppercase">Où le trouver ?</a>
+                    <div class="space-y-1">
+                        <label class="text-gray-300 text-sm font-semibold ml-1">Âge</label>
+                        <input type="number" id="age" placeholder="Votre âge"
+                            class="w-full p-3 rounded-xl outline-none transition" required>
                     </div>
-                    <input type="text" id="trucky_id" placeholder="Votre ID" class="w-full p-3 rounded-xl outline-none text-sm transition">
-                </div>
-                <div class="space-y-1">
-                    <label class="text-gray-300 text-sm font-semibold ml-1">Heures ETS2</label>
-                    <input type="number" id="hours" placeholder="Ex: 500" class="w-full p-3 rounded-xl outline-none transition" required>
                 </div>
             </div>
-        </div>
 
-        <div class="grid md:grid-cols-2 gap-8">
             <div class="space-y-4">
-                <h3 class="text-orange-500 font-bold uppercase text-xs tracking-tighter border-b border-orange-500/30 pb-2">03. Votre Matériel</h3>
-                <select id="hardware" class="w-full p-3 rounded-xl outline-none bg-white text-black font-medium transition cursor-pointer">
-                    <option value="Clavier/Souris">Clavier / Souris</option>
-                    <option value="Manette">Manette</option>
-                    <option value="Volant">Volant (G29, T300, etc.)</option>
-                </select>
-            </div>
-            <div class="space-y-4">
-                <h3 class="text-orange-500 font-bold uppercase text-xs tracking-tighter border-b border-orange-500/30 pb-2">04. Style de conduite</h3>
-                <select id="drive_style" class="w-full p-3 rounded-xl outline-none bg-white text-black font-medium transition cursor-pointer">
-                    <option value="Réaliste">Réaliste (Respect strict)</option>
-                    <option value="Semi-Réaliste">Semi-Réaliste</option>
-                    <option value="Détendu">Détendu</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="space-y-4">
-            <h3 class="text-orange-500 font-bold uppercase text-xs tracking-tighter border-b border-orange-500/30 pb-2">05. Cartes (DLC)</h3>
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 bg-slate-900/30 rounded-2xl border border-slate-700">
-                <label class="flex items-center space-x-3 cursor-pointer group hover:bg-slate-700/30 p-2 rounded-lg transition">
-                    <input type="checkbox" class="dlc w-4 h-4 accent-orange-500" value="Going East">
-                    <span class="text-xs text-gray-400 group-hover:text-white transition">Going East</span>
-                </label>
-                <label class="flex items-center space-x-3 cursor-pointer group hover:bg-slate-700/30 p-2 rounded-lg transition">
-                    <input type="checkbox" class="dlc w-4 h-4 accent-orange-500" value="Scandinavia">
-                    <span class="text-xs text-gray-400 group-hover:text-white transition">Scandinavia</span>
-                </label>
-                <label class="flex items-center space-x-3 cursor-pointer group hover:bg-slate-700/30 p-2 rounded-lg transition">
-                    <input type="checkbox" class="dlc w-4 h-4 accent-orange-500" value="France">
-                    <span class="text-xs text-gray-400 group-hover:text-white transition">France</span>
-                </label>
-                <label class="flex items-center space-x-3 cursor-pointer group hover:bg-slate-700/30 p-2 rounded-lg transition">
-                    <input type="checkbox" class="dlc w-4 h-4 accent-orange-500" value="Italia">
-                    <span class="text-xs text-gray-400 group-hover:text-white transition">Italia</span>
-                </label>
-                <label class="flex items-center space-x-3 cursor-pointer group hover:bg-slate-700/30 p-2 rounded-lg transition">
-                    <input type="checkbox" class="dlc w-4 h-4 accent-orange-500" value="Baltic Sea">
-                    <span class="text-xs text-gray-400 group-hover:text-white transition">Baltic Sea</span>
-                </label>
-                <label class="flex items-center space-x-3 cursor-pointer group hover:bg-slate-700/30 p-2 rounded-lg transition">
-                    <input type="checkbox" class="dlc w-4 h-4 accent-orange-500" value="Black Sea">
-                    <span class="text-xs text-gray-400 group-hover:text-white transition">Black Sea</span>
-                </label>
-                <label class="flex items-center space-x-3 cursor-pointer group hover:bg-slate-700/30 p-2 rounded-lg transition">
-                    <input type="checkbox" class="dlc w-4 h-4 accent-orange-500" value="Iberia">
-                    <span class="text-xs text-gray-400 group-hover:text-white transition">Iberia</span>
-                </label>
-                <label class="flex items-center space-x-3 cursor-pointer group hover:bg-slate-700/30 p-2 rounded-lg transition">
-                    <input type="checkbox" class="dlc w-4 h-4 accent-orange-500" value="West Balkans">
-                    <span class="text-xs text-gray-400 group-hover:text-white transition">West Balkans</span>
-                </label>
-            </div>
-        </div>
-
-        <div class="space-y-4">
-            <h3 class="text-orange-500 font-bold uppercase text-xs tracking-tighter border-b border-orange-500/30 pb-2">06. Votre Engagement</h3>
-            <div class="space-y-4">
-                <div class="space-y-1">
-                    <label class="text-gray-300 text-sm font-semibold ml-1">Disponibilités</label>
-                    <input type="text" id="availability" placeholder="Ex: Soirs et week-ends" class="w-full p-3 rounded-xl outline-none transition">
-                </div>
-                <div class="space-y-1">
-                    <label class="text-gray-300 text-sm font-semibold ml-1">Motivation</label>
-                    <textarea id="motivation" rows="4" class="w-full p-3 rounded-xl outline-none transition" placeholder="Pourquoi EuroSillage ?"></textarea>
+                <h3
+                    class="text-orange-500 font-bold uppercase text-xs tracking-tighter border-b border-orange-500/30 pb-2">
+                    02. Profil de Conducteur</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="space-y-1">
+                        <div class="flex justify-between items-center px-1">
+                            <label class="text-gray-300 text-sm font-semibold">ID Steam</label>
+                            <a href="https://steamid.pro/fr/" target="_blank"
+                                class="text-[9px] text-orange-400 hover:text-white transition uppercase">Aide ?</a>
+                        </div>
+                        <input type="text" id="steam_id" placeholder="7656119..."
+                            class="w-full p-3 rounded-xl outline-none text-sm transition">
+                    </div>
+                    <div class="space-y-1">
+                        <div class="flex justify-between items-center px-1">
+                            <label class="text-gray-300 text-sm font-semibold">Pseudo Trucky</label>
+                            <a href="https://hub.truckyapp.com/profile" target="_blank"
+                                class="text-[9px] text-orange-400 hover:text-white transition uppercase">Où le trouver
+                                ?</a>
+                        </div>
+                        <input type="text" id="trucky_id" placeholder="Votre ID"
+                            class="w-full p-3 rounded-xl outline-none text-sm transition">
+                    </div>
+                    <div class="space-y-1">
+                        <label class="text-gray-300 text-sm font-semibold ml-1">Heures ETS2</label>
+                        <input type="number" id="hours" placeholder="Ex: 500"
+                            class="w-full p-3 rounded-xl outline-none transition" required>
+                    </div>
                 </div>
             </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <h3
+                        class="text-orange-500 font-bold uppercase text-xs tracking-tighter border-b border-orange-500/30 pb-2">
+                        03. Votre Matériel</h3>
+                    <select id="hardware"
+                        class="w-full p-3 rounded-xl outline-none bg-white text-black font-medium transition cursor-pointer">
+                        <option value="Clavier/Souris">Clavier / Souris</option>
+                        <option value="Manette">Manette</option>
+                        <option value="Volant">Volant (G29, T300, etc.)</option>
+                    </select>
+                </div>
+                <div class="space-y-4">
+                    <h3
+                        class="text-orange-500 font-bold uppercase text-xs tracking-tighter border-b border-orange-500/30 pb-2">
+                        04. Style de conduite</h3>
+                    <select id="drive_style"
+                        class="w-full p-3 rounded-xl outline-none bg-white text-black font-medium transition cursor-pointer">
+                        <option value="Réaliste">Réaliste (Respect strict)</option>
+                        <option value="Semi-Réaliste">Semi-Réaliste</option>
+                        <option value="Détendu">Détendu</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <h3
+                    class="text-orange-500 font-bold uppercase text-xs tracking-tighter border-b border-orange-500/30 pb-2">
+                    05. Cartes (DLC)</h3>
+                <div
+                    class="grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 bg-slate-900/30 rounded-2xl border border-slate-700">
+                    <label
+                        class="flex items-center space-x-3 cursor-pointer group hover:bg-slate-700/30 p-2 rounded-lg transition">
+                        <input type="checkbox" class="dlc w-4 h-4 accent-orange-500" value="Going East">
+                        <span class="text-xs text-gray-400 group-hover:text-white transition">Going East</span>
+                    </label>
+                    <label
+                        class="flex items-center space-x-3 cursor-pointer group hover:bg-slate-700/30 p-2 rounded-lg transition">
+                        <input type="checkbox" class="dlc w-4 h-4 accent-orange-500" value="Scandinavia">
+                        <span class="text-xs text-gray-400 group-hover:text-white transition">Scandinavia</span>
+                    </label>
+                    <label
+                        class="flex items-center space-x-3 cursor-pointer group hover:bg-slate-700/30 p-2 rounded-lg transition">
+                        <input type="checkbox" class="dlc w-4 h-4 accent-orange-500" value="France">
+                        <span class="text-xs text-gray-400 group-hover:text-white transition">France</span>
+                    </label>
+                    <label
+                        class="flex items-center space-x-3 cursor-pointer group hover:bg-slate-700/30 p-2 rounded-lg transition">
+                        <input type="checkbox" class="dlc w-4 h-4 accent-orange-500" value="Italia">
+                        <span class="text-xs text-gray-400 group-hover:text-white transition">Italia</span>
+                    </label>
+                    <label
+                        class="flex items-center space-x-3 cursor-pointer group hover:bg-slate-700/30 p-2 rounded-lg transition">
+                        <input type="checkbox" class="dlc w-4 h-4 accent-orange-500" value="Baltic Sea">
+                        <span class="text-xs text-gray-400 group-hover:text-white transition">Baltic Sea</span>
+                    </label>
+                    <label
+                        class="flex items-center space-x-3 cursor-pointer group hover:bg-slate-700/30 p-2 rounded-lg transition">
+                        <input type="checkbox" class="dlc w-4 h-4 accent-orange-500" value="Black Sea">
+                        <span class="text-xs text-gray-400 group-hover:text-white transition">Black Sea</span>
+                    </label>
+                    <label
+                        class="flex items-center space-x-3 cursor-pointer group hover:bg-slate-700/30 p-2 rounded-lg transition">
+                        <input type="checkbox" class="dlc w-4 h-4 accent-orange-500" value="Iberia">
+                        <span class="text-xs text-gray-400 group-hover:text-white transition">Iberia</span>
+                    </label>
+                    <label
+                        class="flex items-center space-x-3 cursor-pointer group hover:bg-slate-700/30 p-2 rounded-lg transition">
+                        <input type="checkbox" class="dlc w-4 h-4 accent-orange-500" value="West Balkans">
+                        <span class="text-xs text-gray-400 group-hover:text-white transition">West Balkans</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <h3
+                    class="text-orange-500 font-bold uppercase text-xs tracking-tighter border-b border-orange-500/30 pb-2">
+                    06. Votre Engagement</h3>
+                <div class="space-y-4">
+                    <div class="space-y-1">
+                        <label class="text-gray-300 text-sm font-semibold ml-1">Disponibilités</label>
+                        <input type="text" id="availability" placeholder="Ex: Soirs et week-ends"
+                            class="w-full p-3 rounded-xl outline-none transition">
+                    </div>
+                    <div class="space-y-1">
+                        <label class="text-gray-300 text-sm font-semibold ml-1">Motivation</label>
+                        <textarea id="motivation" rows="4" class="w-full p-3 rounded-xl outline-none transition"
+                            placeholder="Pourquoi EuroSillage ?"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-4 p-4 bg-orange-500/10 rounded-2xl border border-orange-500/30">
+                <label class="flex items-center space-x-3 cursor-pointer group">
+                    <input type="checkbox" id="accept_rules" class="w-5 h-5 accent-orange-600" required>
+                    <span class="text-sm text-gray-200 group-hover:text-white transition"> J'ai lu et j'accepte le <a
+                            href="reglement.html" target="_blank" class="text-orange-500 underline font-bold">règlement
+                            officiel</a> d'EuroSillage.
+                    </span>
+                </label>
+
+            </div>
+
+            <button type="submit"
+                class="w-full bg-orange-600 hover:bg-orange-500 text-white font-black uppercase italic py-5 rounded-2xl transition transform hover:scale-[1.02] shadow-xl tracking-widest text-lg">
+                Transmettre mon dossier</button>
+
+        </form>
+        <div class="mt-6 text-center">
+            <p class="text-gray-400 text-xs uppercase tracking-widest mb-2">Pas encore sur notre serveur ?</p>
+            <a href="https://discord.gg/YnG3dg6SG4" target="_blank"
+                class="flex items-center justify-center space-x-2 text-white hover:text-orange-500 transition duration-300 group">
+                <span class="bg-slate-700 group-hover:bg-orange-600 p-2 rounded-lg transition">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                        <path
+                            d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.086 2.157 2.419c0 1.334-.956 2.419-2.157 2.419zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.086 2.157 2.419c0 1.334-.946 2.419-2.157 2.419z" />
+                    </svg>
+                </span>
+                <span class="font-bold uppercase italic tracking-tighter">Rejoindre le serveur EuroSillage</span>
+            </a>
         </div>
+    </section>
 
-        <div class="space-y-4 p-4 bg-orange-500/10 rounded-2xl border border-orange-500/30">
-        <label class="flex items-center space-x-3 cursor-pointer group">
-        <input type="checkbox" id="accept_rules" class="w-5 h-5 accent-orange-600" required>
-        <span class="text-sm text-gray-200 group-hover:text-white transition"> J'ai lu et j'accepte le <a href="reglement.html" target="_blank" class="text-orange-500 underline font-bold">règlement officiel</a> d'EuroSillage.
-        </span>
-    </label>
-</div>
 
-        <button type="submit" class="w-full bg-orange-600 hover:bg-orange-500 text-white font-black uppercase italic py-5 rounded-2xl transition transform hover:scale-[1.02] shadow-xl tracking-widest text-lg"> Transmettre mon dossier</button>
-    </form>
-</section>
 
     <script src="script.js"></script>
 </body>
