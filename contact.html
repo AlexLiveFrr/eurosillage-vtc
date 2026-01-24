@@ -28,12 +28,10 @@
             <ul class="flex items-center gap-6 text-white text-xs font-bold uppercase tracking-widest" id="nav-links">
                 <li><a href="index.html" class="hover:text-orange-500 transition">Accueil</a></li>
                 <li><a href="entreprise.html" class="hover:text-orange-500 transition">Entreprise</a></li>
-                <li><a href="pourquoinouschoisir.html" class="hover:text-orange-500 transition text-center">Pourquoi
-                        nous choisir ?</a></li>
+                <li><a href="pourquoinouschoisir.html" class="hover:text-orange-500 transition text-center">Pourquoi nous choisir ?</a></li>
                 <li><a href="reglement.html" class="hover:text-orange-500 transition">Règlement</a></li>
                 <li><a href="flotte.html" class="hover:text-orange-500 transition">Flotte</a></li>
-                <li><a href="contact.html"
-                        class="bg-orange-600 px-4 py-2 rounded hover:bg-orange-700 transition">Postuler</a></li>
+                <li><a href="contact.html"class="bg-orange-600 px-4 py-2 rounded hover:bg-orange-700 transition">Postuler</a></li>
             </ul>
         </div>
     </nav>
@@ -71,6 +69,29 @@
                         <label class="text-gray-300 text-sm font-semibold ml-1">Âge</label>
                         <input type="number" id="age" placeholder="Votre âge"
                             class="w-full p-3 rounded-xl outline-none transition" required>
+                    </div>
+                    <div class="space-y-1">
+                        <label class="text-gray-300 text-sm font-semibold ml-1 uppercase tracking-widest">Poste
+                            souhaité</label>
+                        <select id="role"
+                            class="w-full p-3 rounded-xl outline-none transition bg-white text-black font-bold border-2 border-slate-700 focus:border-orange-500"
+                            required>
+                            <option value="" disabled selected>-- Sélectionne ton rôle --</option>
+                            <option value="Chauffeur">🚚 Chauffeur (Route & Convois)</option>
+                            <option value="Staff">🛡️ Staff (Modération & Gestion)</option>
+                            <option value="Transitionnaire">🗺️ Transitionnaire (Logistique & Trajets)</option>
+                        </select>
+                    </div>
+                    <div class="space-y-1">
+                        <label class="text-gray-300 text-sm font-semibold ml-1 uppercase tracking-widest">Niveau
+                            d'expérience</label>
+                        <select id="exp_level"
+                            class="w-full p-3 rounded-xl outline-none transition bg-white text-black font-bold border-2 border-slate-700 focus:border-orange-500"
+                            required>
+                            <option value="Débutant">🌱 Débutant (Je découvre ETS2)</option>
+                            <option value="Intermédiaire">🚛 Intermédiaire (Je roule régulièrement)</option>
+                            <option value="Expert">🏆 Expert (Fan de réalisme pur)</option>
+                        </select>
                     </div>
                 </div>
             </div>
